@@ -1,0 +1,27 @@
+/*
+This is CORE SCSS for common little style, not moudule.
+Moudule concept need in APP SCSS.
+USED with bootstrap's variables and mixins
+AND slogup's core-mixins in ./mixins
+*/
+/** layout **/
+/** label,title **/
+button, textarea {
+  background: none;
+  outline: none;
+  border: none;
+  resize: none;
+  padding: 0;
+  margin: 0; }
+
+/** component **/
+.tsg .wrapper {
+  width: 1024px;
+  margin: 0 auto;
+  position: relative; }
+
+@media all and (max-width: 490px) {
+  .tsg .wrapper {
+    width: 490px; } }
+
+/*# sourceMappingURL=tsgup.css.map */

@@ -1,0 +1,24 @@
+@import "../core/core";
+@import "./defaults/variables";
+
+.tsg {
+  .wrapper {
+    width: $body-wrapper-width;
+    margin: 0 auto;
+    position: relative;
+  }
+
+  .tsg-header {
+
+  }
+}
+
+@media all and (max-width: 490px) {
+  .tsg{
+    .wrapper{
+      width: 490px;
+    }
+  }
+}
+
+@import "./layouts/header";
