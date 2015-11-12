@@ -17,6 +17,8 @@ button, textarea {
 /** component **/
 /*
 Generic --> Specific
+$font-*
+$border-*
 */
 ul, li {
   list-style-type: none;
