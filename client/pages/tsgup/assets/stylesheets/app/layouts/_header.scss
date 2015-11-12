@@ -1,0 +1,25 @@
+.tsg-header{
+  h1{
+    display: inline-block;
+    float: left;
+    margin: 0;
+    img{
+      width: 90px;
+      height: 90px;
+    }
+  }
+
+  .header__nav{
+    float: right;
+    padding: 30px 10px 10px 10px;
+    li{
+      display: inline-block;
+      padding: 0 15px;
+      border-left: 1px solid #ddd;
+      font-size: 1.25rem;
+      line-height: 1;
+      color: #030303;
+      @include set-first-child-border-default();
+    }
+  }
+}

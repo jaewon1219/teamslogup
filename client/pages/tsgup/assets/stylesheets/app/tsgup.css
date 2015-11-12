@@ -15,13 +15,65 @@ button, textarea {
   margin: 0; }
 
 /** component **/
+/*
+Generic --> Specific
+*/
+ul, li {
+  list-style-type: none;
+  margin: 0;
+  padding: 0; }
+
+a {
+  cursor: pointer;
+  color: inherit; }
+  a:active, a:hover, a:focus {
+    outline: 0;
+    text-decoration: none; }
+
 .tsg .wrapper {
   width: 1024px;
   margin: 0 auto;
   position: relative; }
+.tsg .tsg-main:focus {
+  outline: 0; }
+.tsg .tsg-main__intro-container {
+  width: 100%;
+  height: 490px;
+  background: url("https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQzmKcWTO_CnLp7H2auTmpSb1UpwToK28mReuF18i2fme96oiBO") no-repeat center;
+  background-size: cover; }
+  .tsg .tsg-main__intro-container .wrapper {
+    height: 100%; }
+
+.tsg-intro {
+  display: table;
+  width: 100%;
+  height: 100%; }
+  .tsg-intro .intro__box {
+    display: table-cell;
+    vertical-align: middle;
+    width: 50%; }
 
 @media all and (max-width: 490px) {
   .tsg .wrapper {
     width: 490px; } }
+.tsg-header h1 {
+  display: inline-block;
+  float: left;
+  margin: 0; }
+  .tsg-header h1 img {
+    width: 90px;
+    height: 90px; }
+.tsg-header .header__nav {
+  float: right;
+  padding: 30px 10px 10px 10px; }
+  .tsg-header .header__nav li {
+    display: inline-block;
+    padding: 0 15px;
+    border-left: 1px solid #ddd;
+    font-size: 1.25rem;
+    line-height: 1;
+    color: #030303; }
+    .tsg-header .header__nav li:first-child {
+      border: 0; }
 
 /*# sourceMappingURL=tsgup.css.map */

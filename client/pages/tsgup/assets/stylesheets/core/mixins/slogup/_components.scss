@@ -55,3 +55,9 @@ button, textarea {
   left: -50%; right: -50%;
   margin:auto;
 }
+
+@mixin set-first-child-border-default(){
+  &:first-child{
+    border: 0;
+  }
+}
