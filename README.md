@@ -115,9 +115,19 @@ container는 web application과 모듈을 한 단계 분리 시킴으로써 모�
 
 
 ## 3. CSS 코드 작성 규칙
-### 3.1 OOCSS (SASS)
-### 3.2 Responsive for CSS
-### 3.3 Mixin
+### 3.1 OOCSS (SCSS)
+#### 3.1.1 설치 on Mac
+SCSS를 설치하기 위해서는 기본적으로 Ruby가 필요합니다. 하지만 운이 좋게도 맥은 기본적으로 Ruby가 깔려져있습니다.
+그래서 터미널에서 아주 간단한 아래 명령어만 입력하면 됩니다.
+	
+	sudo gem install sass
+
+### 3.2 일반 규칙
+#### 3.2.1 type selector 지양 
+#### 3.2.2 The "multi-class" pattern
+	
+### 3.3 Responsive for CSS
+### 3.4 Mixin
 type selector사용 지양
 The “multi-class” pattern
 http://nicolasgallagher.com/about-html-semantics-front-end-architecture/

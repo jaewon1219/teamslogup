@@ -49,6 +49,8 @@ a {
   background: #383E4C;
   color: #fff;
   font-weight: normal; }
+.tsg .tsg-main__section-container {
+  background: #fff; }
 
 .tsg-intro {
   display: table;
@@ -63,6 +65,33 @@ a {
   padding: 60px 0; }
   .tsg-why .why__header {
     text-align: center; }
+
+.tsg-section {
+  text-align: center; }
+  .tsg-section .section__header h2 {
+    display: inline-block;
+    width: 400px;
+    padding: 0 40px;
+    font-size: 5rem;
+    border-left: 1px solid #000;
+    border-right: 1px solid #000; }
+  .tsg-section ul.ptfolios-container li {
+    display: inline-block; }
+  .tsg-section .section__content {
+    padding-left: 5px;
+    padding-right: 5px; }
+    .tsg-section .section__content ul {
+      margin-left: -5px;
+      margin-right: -5px; }
+      .tsg-section .section__content ul li {
+        padding-left: 5px;
+        padding-right: 5px; }
+    .tsg-section .section__content ul.section__blog-list li {
+      display: inline-block;
+      width: 50%;
+      float: left; }
+    .tsg-section .section__content ul.section_dev-stack li {
+      display: inline-block; }
 
 @media all and (max-width: 490px) {
   .tsg .wrapper {

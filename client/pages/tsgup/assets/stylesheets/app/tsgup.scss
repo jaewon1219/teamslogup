@@ -1,16 +1,16 @@
 @import "../core/core";
 @import "./defaults/variables";
 
-ul, li{
+ul, li {
   list-style-type: none;
   margin: 0;
   padding: 0;
 }
 
-a{
+a {
   cursor: pointer;
   color: inherit;
-  &:active, &:hover, &:focus{
+  &:active, &:hover, &:focus {
     outline: 0;
     text-decoration: none;
   }
@@ -23,87 +23,94 @@ a{
     position: relative;
   }
 
-  .tsg-main:focus{
+  .tsg-main:focus {
     outline: 0;
   }
-  .tsg-main__intro-container{
+
+  .tsg-main__intro-container {
     width: 100%;
     height: 490px;
     background: url("https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQzmKcWTO_CnLp7H2auTmpSb1UpwToK28mReuF18i2fme96oiBO") no-repeat center;
     background-size: cover;
-    .wrapper{
+    .wrapper {
       height: 100%;
     }
   }
 
-  .tsg-main__why-container{
+  .tsg-main__why-container {
     background: #383E4C;
     color: #fff;
     font-weight: normal;
   }
+
+  .tsg-main__section-container {
+    background: #fff;
+  }
 }
 
-.tsg-intro{
+.tsg-intro {
   display: table;
   width: 100%;
   height: 100%;
-  .intro__box{
+  .intro__box {
     display: table-cell;
     vertical-align: middle;
     width: 50%;
   }
 }
 
-.tsg-why{
+.tsg-why {
   padding: 60px 0;
-  .why__header{
+  .why__header {
     text-align: center;
   }
 }
 
+.tsg-section {
+  text-align: center;
+  .section__header {
+    h2 {
+      display: inline-block;
+      width: 400px;
+      padding: 0 40px;
+      font-size: 5rem;
+      border-left: 1px solid #000;
+      border-right: 1px solid #000;
+
+    }
+  }
+  ul.ptfolios-container {
+    li {
+      display: inline-block;
+    }
+  }
+
+  .section__content{
+    @include set-grid-padding-and-margin(ul, li, 5px);
+    ul.section__blog-list {
+      li {
+        display: inline-block;
+        width: 50%;
+        float: left;
+      }
+    }
+    ul.section_dev-stack{
+      li {
+        display: inline-block;
+      }
+    }
+  }
+}
+
 @media all and (max-width: 490px) {
-  .tsg{
-    .wrapper{
+  .tsg {
+    .wrapper {
       width: 490px;
     }
   }
 }
 
 @import "./layouts/header";
-
-
-// Predefined Break-points
-$mediaMaxWidth: 1260px;
-$mediaBp1Width: 960px;
-$mediaMinWidth: 480px;
-
-@function translate-media-condition($c) {
-  $condMap: (
-          "screen": "only screen",
-          "print": "only print",
-          "retina": "(-webkit-min-device-pixel-ratio: 1.5), (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (min-device-pixel-ratio: 1.5), (min-resolution: 120dpi)",
-          ">maxWidth": "(min-width: #{$mediaMaxWidth + 1})",
-          "<maxWidth": "(max-width: #{$mediaMaxWidth})",
-          ">bp1Width": "(min-width: #{$mediaBp1Width + 1})",
-          "<bp1Width": "(max-width: #{$mediaBp1Width})",
-          ">minWidth": "(min-width: #{$mediaMinWidth + 1})",
-          "<minWidth": "(max-width: #{$mediaMinWidth})"
-  );
-  @return map-get( $condMap, $c );
-}
-
-// The mdia mixin
-@mixin media($args...) {
-  $query: "";
-  @each $arg in $args {
-    $op: "";
-    @if ( $query != "" ) {
-      $op: " and ";
-    }
-    $query: $query + $op + translate-media-condition($arg);
-  }
-  @media #{$query}  { @content; }
-}
 
 /**
  * Usage examples
@@ -112,19 +119,23 @@ $mediaMinWidth: 480px;
   border: 2px solid #777;
   padding: 40px;
   background: silver;
-  @include media( "retina" ){
+  @include media("retina") {
     border: 2px dotted #000;
-  };
-  @include media( "screen", ">bp1Width", "<maxWidth" ){
+  }
+;
+  @include media("screen", ">bp1Width", "<maxWidth") {
     background: red;
     color: white;
-  };
-  @include media( "screen", ">minWidth", "<bp1Width" ){
+  }
+;
+  @include media("screen", ">minWidth", "<bp1Width") {
     background: green;
     color: white;
-  };
-  @include media( "screen", "<minWidth" ){
+  }
+;
+  @include media("screen", "<minWidth") {
     background: blue;
     color: white;
-  };
+  }
+;
 }
