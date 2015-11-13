@@ -25,6 +25,9 @@ ul, li {
   margin: 0;
   padding: 0; }
 
+h1, h2, h3, h4, h5, h6 {
+  margin: 0; }
+
 a {
   cursor: pointer;
   color: inherit; }
@@ -51,6 +54,8 @@ a {
   font-weight: normal; }
 .tsg .tsg-main__section-container {
   background: #fff; }
+.tsg .bg-F3F1F7 {
+  background: #f3f1f7; }
 
 .tsg-intro {
   display: table;
@@ -67,31 +72,63 @@ a {
     text-align: center; }
 
 .tsg-section {
-  text-align: center; }
-  .tsg-section .section__header h2 {
-    display: inline-block;
-    width: 400px;
-    padding: 0 40px;
-    font-size: 5rem;
-    border-left: 1px solid #000;
-    border-right: 1px solid #000; }
+  text-align: center;
+  padding: 100px 0; }
+  .tsg-section .section__header {
+    margin-bottom: 70px; }
+    .tsg-section .section__header h2 {
+      display: inline-block;
+      width: 400px;
+      padding: 0 40px;
+      font-size: 5rem;
+      border-left: 1px solid #000;
+      border-right: 1px solid #000;
+      margin-bottom: 40px; }
+    .tsg-section .section__header p {
+      width: 420px;
+      margin: 0 auto; }
   .tsg-section ul.ptfolios-container li {
     display: inline-block; }
   .tsg-section .section__content {
     padding-left: 5px;
-    padding-right: 5px; }
-    .tsg-section .section__content ul {
+    padding-right: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px; }
+    .tsg-section .section__content ul.section__blog-list {
       margin-left: -5px;
       margin-right: -5px; }
-      .tsg-section .section__content ul li {
+      .tsg-section .section__content ul.section__blog-list li {
         padding-left: 5px;
         padding-right: 5px; }
+    .tsg-section .section__content ul.section__blog-list {
+      margin-top: -5px;
+      margin-bottom: -5px; }
+      .tsg-section .section__content ul.section__blog-list li {
+        padding-top: 5px;
+        padding-bottom: 5px; }
     .tsg-section .section__content ul.section__blog-list li {
       display: inline-block;
       width: 50%;
       float: left; }
-    .tsg-section .section__content ul.section_dev-stack li {
-      display: inline-block; }
+    .tsg-section .section__content ul.section_dev-stack {
+      width: 650px;
+      margin: 30px auto 20px auto; }
+      .tsg-section .section__content ul.section_dev-stack li {
+        display: inline-block;
+        padding: 10px;
+        margin: 5px;
+        border: 1px solid #ddd; }
+    .tsg-section .section__content .section__blog-item {
+      padding: 10px;
+      border: 1px solid #ddd;
+      background: #fff; }
+      .tsg-section .section__content .section__blog-item .pf-img {
+        float: left;
+        width: 50px;
+        height: 50px; }
+      .tsg-section .section__content .section__blog-item div {
+        text-align: left;
+        margin-left: 60px; }
 
 @media all and (max-width: 490px) {
   .tsg .wrapper {

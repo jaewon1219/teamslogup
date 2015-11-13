@@ -25,8 +25,7 @@
   }
 }
 
-
-@mixin set-grid-padding-and-margin($child, $nestedChild, $value){
+@mixin set-grid-horizonal-padding-and-margin($child, $nestedChild, $value){
   padding-left: $value;
   padding-right: $value;
   #{$child}{
@@ -35,6 +34,19 @@
     #{$nestedChild}{
       padding-left: $value;
       padding-right: $value;
+    }
+  }
+}
+
+@mixin set-grid-vertiacl-padding-and-margin($child, $nestedChild, $value){
+  padding-top: $value;
+  padding-bottom: $value;
+  #{$child}{
+    margin-top: $value * -1;
+    margin-bottom: $value * -1;
+    #{$nestedChild}{
+      padding-top: $value;
+      padding-bottom: $value;
     }
   }
 }
