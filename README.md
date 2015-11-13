@@ -122,7 +122,10 @@ SCSS를 설치하기 위해서는 기본적으로 Ruby가 필요합니다. 하�
 	
 	sudo gem install sass
 
+참조: [sass](http://www.sass-lang.com/guide)
+
 ### 3.2 일반 규칙
+
 #### 3.2.1 type selector 지양 
 #### 3.2.2 The "multi-class" pattern
 	

@@ -122,10 +122,10 @@ a {
       padding: 10px;
       border: 1px solid #ddd;
       background: #fff;
-      $pf-img-width: 50px !global;
       .pf-img{
         float: left;
         width: 50px;
+        $pf-img-width: 50px !global;
         height: $pf-img-width;
       }
       div{
