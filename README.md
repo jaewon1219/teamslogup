@@ -79,12 +79,13 @@ BEM을 적용했을때입니다. .media_img--rev에서 이 요소는 .media의 �
 		</div>
 	</body>
 	
-webname은 사용할 고유 이름이며 프로젝트 이름의 약어를 활용한다.
-다른 모듈과의 중복을 방지하기 위해서 일반적인 단어를 지양한다.  
+webname은 사용할 고유 이름이며 프로젝트 이름의 약어를 활용합니다.
+다른 모듈과의 중복을 방지하기 위해서 일반적인 단어를 지양합니다.  
   
 ####1.2.2 모듈과 container
 web application내에서 독립된 모듈을 사용할 경우 모듈을 container로 감싸줘야합니다.
 container는 web application과 모듈을 한 단계 분리 시킴으로써 모듈에 대한 CSS 스타일링이 쉽도록 해줍니다.
+
 	
 	<div class="sectionName wrapper">
         <div class="sectionName__moduleName-container">
@@ -96,6 +97,8 @@ container는 web application과 모듈을 한 단계 분리 시킴으로써 모�
         </div>
     </div>
     
+하지만 위의 예제처럼 모듈이 container의 child만 가능한건 아닙니다. 모듈은 container의 descendant도 가능합니다.
+    
     
 ### 1.3 네이밍 문자
 ####1.3.1 일반 규칙  
@@ -106,16 +109,21 @@ container는 web application과 모듈을 한 단계 분리 시킴으로써 모�
 5. 쌍(아래)붙임표는 약속어이므로 사용을 금지합니다.
  
 ## 2. HTML 코드 작성 규칙
+### 2.1 
 
 
 
 
 ## 3. CSS 코드 작성 규칙
+### 3.1 OOCSS (SASS)
+### 3.2 Responsive for CSS
+### 3.3 Mixin
 type selector사용 지양
 The “multi-class” pattern
 http://nicolasgallagher.com/about-html-semantics-front-end-architecture/
 
 ## 4. 웹접근성
 ### 4.1 Skip navigation
+### 4.2 Headings
 
 ## 5. 알아두면 좋은 특징들

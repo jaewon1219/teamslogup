@@ -45,6 +45,10 @@ a {
   background-size: cover; }
   .tsg .tsg-main__intro-container .wrapper {
     height: 100%; }
+.tsg .tsg-main__why-container {
+  background: #383E4C;
+  color: #fff;
+  font-weight: normal; }
 
 .tsg-intro {
   display: table;
@@ -54,6 +58,11 @@ a {
     display: table-cell;
     vertical-align: middle;
     width: 50%; }
+
+.tsg-why {
+  padding: 60px 0; }
+  .tsg-why .why__header {
+    text-align: center; }
 
 @media all and (max-width: 490px) {
   .tsg .wrapper {
@@ -77,5 +86,28 @@ a {
     color: #030303; }
     .tsg-header .header__nav li:first-child {
       border: 0; }
+
+/**
+ * Usage examples
+ */
+.section {
+  border: 2px solid #777;
+  padding: 40px;
+  background: silver; }
+  @media (-webkit-min-device-pixel-ratio: 1.5), (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3 / 2), (min-device-pixel-ratio: 1.5), (min-resolution: 120dpi) {
+    .section {
+      border: 2px dotted #000; } }
+  @media only screen and (min-width: 961px) and (max-width: 1260px) {
+    .section {
+      background: red;
+      color: white; } }
+  @media only screen and (min-width: 481px) and (max-width: 960px) {
+    .section {
+      background: green;
+      color: white; } }
+  @media only screen and (max-width: 480px) {
+    .section {
+      background: blue;
+      color: white; } }
 
 /*# sourceMappingURL=tsgup.css.map */
