@@ -109,9 +109,28 @@ container는 web application과 모듈을 한 단계 분리 시킴으로써 모�
 5. 쌍(아래)붙임표는 약속어이므로 사용을 금지합니다.
  
 ## 2. HTML 코드 작성 규칙
-### 2.1 
+### 2.1 outline
+#### 2.1.1 주요한 태그들
+1) Sectioning root  
+하나의 독립된 outline을 제공합니다.
+해당되는 태그들은 body, blockquote, figure, td, details, dialog, fieldset 입니다.
+2) Sectioning content
+sectioning content는 HTML 문서를 섹션으로 나누도록 도와줍니다. 섹션과 그 섹션안의 헤더를 이용하여 outline을 만들 수 있게됩니다. article, aside, nav, section
 
+#### 2.1.2 일반 규칙
+1) only H1 - 웹페이지내에서 H1은 하나만 갖습니다. SEO 강화를 위해서 H1은 title과 달라야합니다.  
+  
+2) sectioning content내에 headings(h1~h6)을 정의해줍니다. 하지만 웹페이지에서 보여줄 때 보이면 안되는 경우가 있습니다. 그럴 때는 부트스트랩에서 제공하는 클래스 sr-only를 사용합니다.  
+sr-only를 사용하는 이유는 다른 Hidden text방식이 구글의 검색 랭킹과 웹접근성에 영향을 주기 때문입니다.  
+([여러 Hidden text방식에 대한 설명](http://stackoverflow.com/questions/5523194/html5-titles-in-sectioning-elements-document-outline-and-seo-implications?rq=1))  
+([구글 Quality guidelines](https://support.google.com/webmasters/answer/66353?hl=en))
 
+3) 아래의 홈페이지에서 HTML구조가 맞는 지 확인해야합니다. team slogup에서는 untitled가 없어야합니다. 
+[https://gsnedders.html5.org/outliner/](https://gsnedders.html5.org/outliner/)
+
+### 2.2 HTML 유효 검사
+w3c의 유효 검사를 통과해야합니다.  
+[https://validator.w3.org/](https://validator.w3.org/)
 
 
 ## 3. CSS 코드 작성 규칙
@@ -127,14 +146,19 @@ SCSS를 설치하기 위해서는 기본적으로 Ruby가 필요합니다. 하�
 ### 3.2 일반 규칙
 
 #### 3.2.1 type selector 지양 
+type selector(div, h1, span, ul, li 등등)을 사용할 경우 다른 구역에서의 의도치 않은 CSS가 변경될 수 있습니다.
+하지만 type selector의 올바른 사용은 생산성을 높게합니다. CSS에서 중첩이 2개 이하일때는 신중할 필요가 있습니다.
+
 #### 3.2.2 The "multi-class" pattern
+
 #### 3.2.3 the Pseudo Class Selectors
 https://css-tricks.com/pseudo-class-selectors/
 #### 3.2.4 the Pseudo Elements
 https://css-tricks.com/almanac/selectors/a/after-and-before/
 	
 ### 3.3 Responsive for CSS
-### 3.4 Mixin
+### 3.4 Grid 사용
+### 3.5 Mixin
 http://nicolasgallagher.com/about-html-semantics-front-end-architecture/
 
 ## 4. 웹접근성
