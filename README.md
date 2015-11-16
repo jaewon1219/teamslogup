@@ -128,11 +128,13 @@ SCSS를 설치하기 위해서는 기본적으로 Ruby가 필요합니다. 하�
 
 #### 3.2.1 type selector 지양 
 #### 3.2.2 The "multi-class" pattern
+#### 3.2.3 the Pseudo Class Selectors
+https://css-tricks.com/pseudo-class-selectors/
+#### 3.2.4 the Pseudo Elements
+https://css-tricks.com/almanac/selectors/a/after-and-before/
 	
 ### 3.3 Responsive for CSS
 ### 3.4 Mixin
-type selector사용 지양
-The “multi-class” pattern
 http://nicolasgallagher.com/about-html-semantics-front-end-architecture/
 
 ## 4. 웹접근성

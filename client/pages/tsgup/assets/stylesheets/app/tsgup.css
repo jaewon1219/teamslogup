@@ -26,6 +26,10 @@ ul, li {
   padding: 0; }
 
 h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  font-weight: normal; }
+
+p {
   margin: 0; }
 
 a {
@@ -64,12 +68,46 @@ a {
   .tsg-intro .intro__box {
     display: table-cell;
     vertical-align: middle;
-    width: 50%; }
+    width: 50%;
+    text-align: center; }
+  .tsg-intro .intro__box--left img {
+    width: 250px;
+    height: 120px; }
+  .tsg-intro .intro__box--right {
+    color: #fff; }
+    .tsg-intro .intro__box--right p {
+      margin-top: 20px; }
 
 .tsg-why {
   padding: 60px 0; }
   .tsg-why .why__header {
     text-align: center; }
+    .tsg-why .why__header h3 {
+      margin-top: 10px; }
+      .tsg-why .why__header h3:before {
+        content: '"'; }
+      .tsg-why .why__header h3:after {
+        content: '"'; }
+  .tsg-why .why__contents {
+    margin-top: 80px; }
+    .tsg-why .why__contents:before, .tsg-why .why__contents:after {
+      content: " ";
+      display: table; }
+    .tsg-why .why__contents:after {
+      clear: both; }
+    .tsg-why .why__contents .why__cts {
+      display: inline-block;
+      float: left;
+      width: 33.33333333%;
+      padding: 10px 60px;
+      border-left: 1px solid #fff;
+      text-align: center; }
+      .tsg-why .why__contents .why__cts:first-child {
+        border: 0; }
+      .tsg-why .why__contents .why__cts div {
+        font-size: 4rem;
+        line-height: 1;
+        margin-bottom: 20px; }
 
 .tsg-section {
   text-align: center;
@@ -87,9 +125,9 @@ a {
     .tsg-section .section__header p {
       width: 420px;
       margin: 0 auto; }
-  .tsg-section ul.ptfolios-container li {
-    display: inline-block; }
   .tsg-section .section__content {
+    padding-left: 5px;
+    padding-right: 5px;
     padding-left: 5px;
     padding-right: 5px;
     padding-top: 5px;
@@ -100,12 +138,27 @@ a {
       .tsg-section .section__content ul.section__blog-list li {
         padding-left: 5px;
         padding-right: 5px; }
+    .tsg-section .section__content ul.ptfolios-container {
+      margin-left: -5px;
+      margin-right: -5px; }
+      .tsg-section .section__content ul.ptfolios-container li {
+        padding-left: 5px;
+        padding-right: 5px; }
     .tsg-section .section__content ul.section__blog-list {
       margin-top: -5px;
       margin-bottom: -5px; }
       .tsg-section .section__content ul.section__blog-list li {
         padding-top: 5px;
         padding-bottom: 5px; }
+    .tsg-section .section__content ul.ptfolios-container:before, .tsg-section .section__content ul.ptfolios-container:after {
+      content: " ";
+      display: table; }
+    .tsg-section .section__content ul.ptfolios-container:after {
+      clear: both; }
+    .tsg-section .section__content ul.ptfolios-container li {
+      display: inline-block;
+      width: 33.33333333%;
+      float: left; }
     .tsg-section .section__content ul.section__blog-list li {
       display: inline-block;
       width: 50%;
@@ -118,6 +171,16 @@ a {
         padding: 10px;
         margin: 5px;
         border: 1px solid #ddd; }
+    .tsg-section .section__content .ptfolio .ptfolio__img {
+      width: 100%;
+      height: 230px; }
+    .tsg-section .section__content .ptfolio .ptfolio__body {
+      padding: 20px 0; }
+      .tsg-section .section__content .ptfolio .ptfolio__body h3 {
+        display: inline-block;
+        border-bottom: 2px solid;
+        padding: 0 5px 10px 5px;
+        margin-bottom: 10px; }
     .tsg-section .section__content .section__blog-item {
       padding: 10px;
       border: 1px solid #ddd;
@@ -129,6 +192,8 @@ a {
       .tsg-section .section__content .section__blog-item div {
         text-align: left;
         margin-left: 60px; }
+  .tsg-section .section__footer {
+    margin-top: 30px; }
 
 @media all and (max-width: 490px) {
   .tsg .wrapper {
@@ -152,6 +217,12 @@ a {
     color: #030303; }
     .tsg-header .header__nav li:first-child {
       border: 0; }
+    .tsg-header .header__nav li a {
+      padding: 0 3px 10px 3px; }
+      .tsg-header .header__nav li a:hover {
+        border-bottom: 3px solid #348ec8; }
+    .tsg-header .header__nav li.active a {
+      border-bottom: 3px solid #348ec8; }
 
 /**
  * Usage examples
