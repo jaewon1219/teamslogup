@@ -20,6 +20,18 @@
       line-height: 1;
       color: #030303;
       @include set-first-child-border-default();
+
+      a{
+        padding: 0 3px 10px 3px;
+        &:hover{
+          border-bottom: 3px solid #348ec8;
+        }
+      }
+      &.active{
+        a{
+          border-bottom: 3px solid #348ec8;
+        }
+      }
     }
   }
 }
