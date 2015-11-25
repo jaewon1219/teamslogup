@@ -10,6 +10,6 @@ $font-size-default: 14px !default;
 $body-wrapper-width: 1024px;
 
 
-$mediaDesktopWidth: 1024px;
+$mediaDesktopWidth: $body-wrapper-width;
 $mediaTabletWidth: 768px;
 $mediaPhoneWidth: 490px;

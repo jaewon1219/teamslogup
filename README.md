@@ -184,11 +184,19 @@ app에서 사용되는 구문
 "phoneWidth": $mediaPhoneWidth   
   
 3) 사용방법   
-적용하고자 하는 CSS Selector의 block안의 맨아래에 @mixin media($args...)을 추가한다.
+적용하고자 하는 CSS Selector의 block안의 맨아래에 @mixin media($args...)을 추가한다.  
 
+	.container{
+		background: blue;
+		@include media("screen", ">tabletWidth", "<desktopWidth") {
+    		background: red;
+    		color: white;
+    	};
+    }
   
 [참고: Dmitry Sheiko](http://codepen.io/dsheiko/pen/KeLGy)
 ### 3.4 Grid 사용
+#### 3.4.1 개념
 
 ### 3.5 Mixin
 http://nicolasgallagher.com/about-html-semantics-front-end-architecture/

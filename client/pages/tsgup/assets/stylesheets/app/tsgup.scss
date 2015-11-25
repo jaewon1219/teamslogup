@@ -30,6 +30,15 @@ a {
     width: $body-wrapper-width;
     margin: 0 auto;
     position: relative;
+    @include media(">tabletWidth", "<desktopWidth"){
+      width: $mediaTabletWidth;
+    }
+    @include media("<tabletWidth"){
+      width: $mediaPhoneWidth;
+    }
+    @include media("<phoneWidth"){
+      width: 380px;
+    }
   }
 
   .tsg-main:focus {
@@ -105,11 +114,10 @@ a {
     }
   }
   .why__contents {
+    display: table;
     margin-top: 80px;
-    @include clearfix();
     .why__cts {
-      display: inline-block;
-      float: left;
+      display: table-cell;
       width: 33.33333333%;
       padding: 10px 60px;
       border-left: 1px solid #fff;
@@ -123,6 +131,14 @@ a {
       p {
         font-weight: lighter;
         line-height: 22px;
+      }
+      @include media(">tabletWidth", "<desktopWidth"){
+        padding: 10px;
+      }
+      @include media("<tabletWidth"){
+        display: block;
+        width: 100%;
+        border: 0;
       }
     }
   }
@@ -155,9 +171,14 @@ a {
     ul.ptfolios-container {
       @include clearfix();
       li {
-        display: inline-block;
         width: 33.33333333%;
         float: left;
+        @include media(">tabletWidth", "<desktopWidth"){
+
+        }
+        @include media("<tabletWidth"){
+          width: 100%;
+        }
       }
     }
 
@@ -166,6 +187,12 @@ a {
         display: inline-block;
         width: 50%;
         float: left;
+        @include media(">tabletWidth", "<desktopWidth"){
+
+        }
+        @include media("<tabletWidth"){
+          width: 100%;
+        }
       }
     }
     ul.section_dev-stack {
@@ -186,6 +213,12 @@ a {
           outline: 0;
           text-decoration: none;
         }
+      }
+      @include media(">tabletWidth", "<desktopWidth"){
+
+      }
+      @include media("<tabletWidth"){
+        width: 340px;
       }
     }
 
@@ -327,14 +360,6 @@ a {
 .tsg-main__section-container {
   .section__btn-group .btn-more {
     background-color: #2787ff;
-  }
-}
-
-@media all and (max-width: 490px) {
-  .tsg {
-    .wrapper {
-      width: 490px;
-    }
   }
 }
 

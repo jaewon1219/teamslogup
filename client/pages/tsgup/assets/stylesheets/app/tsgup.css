@@ -43,6 +43,15 @@ a {
   width: 1024px;
   margin: 0 auto;
   position: relative; }
+  @media (min-width: 769px) and (max-width: 1024px) {
+    .tsg .wrapper {
+      width: 768px; } }
+  @media (max-width: 768px) {
+    .tsg .wrapper {
+      width: 490px; } }
+  @media (max-width: 490px) {
+    .tsg .wrapper {
+      width: 380px; } }
 .tsg .tsg-main:focus {
   outline: 0; }
 .tsg .tsg-main__intro-container {
@@ -81,63 +90,23 @@ a {
 .tsg-why {
   padding: 60px 0; }
   .tsg-why .why__header {
-<<<<<<< HEAD
     text-align: center;
-    margin-bottom: 50px;
-  }
-  .tsg-why .why__cts, .why__cts2 {
-    display: inline-block;
-    text-align: center;
-    width: 33%;
-    height:auto;
-    margin:auto 0;
-    padding: 0 50px;
-  }
-  .tsg-why .why__why {
-    font-size: 2em;
-    margin-bottom: 10px;
-  }
-  .tsg-why .why__cts2 {
-    border-left: 1px solid #ddd;
-    border-right: 1px solid #ddd;
-  }
-
-.tsg-section .ptfolio__img {
-   width: 300px;
-   height: 200px;
-}
-.tsg-section .ptfolio {
-  width: 300px;
-  height: 300px;
-  margin: 0 8px;
-  border: 1px solid #eee;
-}
-.tsg-section .ptfolio__body h3 {
-  color: #2787ff;
-  margin: 5px;
-  padding: 5px;
-}
-.tsg-section .section__footer {
-  margin-top: 30px;
-}
-=======
-    text-align: center; }
+    font-weight: lighter;
+    color: #f3f2f7; }
     .tsg-why .why__header h3 {
-      margin-top: 10px; }
+      margin-top: 10px;
+      font-size: 4rem; }
       .tsg-why .why__header h3:before {
         content: '"'; }
       .tsg-why .why__header h3:after {
         content: '"'; }
+    .tsg-why .why__header h4 {
+      font-size: 3rem; }
   .tsg-why .why__contents {
+    display: table;
     margin-top: 80px; }
-    .tsg-why .why__contents:before, .tsg-why .why__contents:after {
-      content: " ";
-      display: table; }
-    .tsg-why .why__contents:after {
-      clear: both; }
     .tsg-why .why__contents .why__cts {
-      display: inline-block;
-      float: left;
+      display: table-cell;
       width: 33.33333333%;
       padding: 10px 60px;
       border-left: 1px solid #fff;
@@ -147,8 +116,18 @@ a {
       .tsg-why .why__contents .why__cts div {
         font-size: 4rem;
         line-height: 1;
-        margin-bottom: 20px; }
->>>>>>> e8edfcc3bfee3803fd62e996589fa8733c86dc99
+        margin-bottom: 35px; }
+      .tsg-why .why__contents .why__cts p {
+        font-weight: lighter;
+        line-height: 22px; }
+      @media (min-width: 769px) and (max-width: 1024px) {
+        .tsg-why .why__contents .why__cts {
+          padding: 10px; } }
+      @media (max-width: 768px) {
+        .tsg-why .why__contents .why__cts {
+          display: block;
+          width: 100%;
+          border: 0; } }
 
 .tsg-section {
   text-align: center;
@@ -196,13 +175,18 @@ a {
     .tsg-section .section__content ul.ptfolios-container:after {
       clear: both; }
     .tsg-section .section__content ul.ptfolios-container li {
-      display: inline-block;
       width: 33.33333333%;
       float: left; }
+      @media (max-width: 768px) {
+        .tsg-section .section__content ul.ptfolios-container li {
+          width: 100%; } }
     .tsg-section .section__content ul.section__blog-list li {
       display: inline-block;
       width: 50%;
       float: left; }
+      @media (max-width: 768px) {
+        .tsg-section .section__content ul.section__blog-list li {
+          width: 100%; } }
     .tsg-section .section__content ul.section_dev-stack {
       width: 650px;
       margin: 30px auto 20px auto; }
@@ -210,34 +194,125 @@ a {
         display: inline-block;
         padding: 10px;
         margin: 5px;
-        border: 1px solid #ddd; }
-    .tsg-section .section__content .ptfolio .ptfolio__img {
+        border: 1.5px solid #53494a;
+        border-radius: 0.3em; }
+      .tsg-section .section__content ul.section_dev-stack li:hover {
+        cursor: pointer;
+        color: white;
+        background-color: #393333; }
+        .tsg-section .section__content ul.section_dev-stack li:hover:active, .tsg-section .section__content ul.section_dev-stack li:hover:hover, .tsg-section .section__content ul.section_dev-stack li:hover:focus {
+          outline: 0;
+          text-decoration: none; }
+      @media (max-width: 768px) {
+        .tsg-section .section__content ul.section_dev-stack {
+          width: 340px; } }
+    .tsg-section .section__content .ptfolio {
+      position: relative;
+      border: 1px solid #ddd; }
+      .tsg-section .section__content .ptfolio .ptfolio__img {
+        width: 100%;
+        height: 230px; }
+    .tsg-section .section__content .ptfolio__mask {
+      position: absolute;
+      top: 0;
+      left: 0;
+      overflow: hidden;
       width: 100%;
-      height: 230px; }
-    .tsg-section .section__content .ptfolio .ptfolio__body {
+      height: 230px;
+      opacity: 0;
+      color: #fff;
+      filter: alpha(opacity=0);
+      background-color: #4a4a4a;
+      -webkit-transition: all 0.4s ease-in-out;
+      -moz-transition: all 0.4s ease-in-out;
+      -o-transition: all 0.4s ease-in-out;
+      -ms-transition: all 0.4s ease-in-out;
+      transition: all 0.4s ease-in-out; }
+      .tsg-section .section__content .ptfolio__mask:hover {
+        filter: alpha(opacity=100);
+        opacity: .8; }
+      .tsg-section .section__content .ptfolio__mask .mask-text {
+        display: inline-block;
+        padding: 10px 5px 10px 5px;
+        border-top: 1px solid #fff;
+        border-bottom: 1px solid #fff;
+        margin-top: 60px; }
+      .tsg-section .section__content .ptfolio__mask h4 {
+        font-weight: bold;
+        margin-bottom: 20px; }
+    .tsg-section .section__content .ptfolio__body {
       padding: 20px 0; }
-      .tsg-section .section__content .ptfolio .ptfolio__body h3 {
+      .tsg-section .section__content .ptfolio__body h4 {
         display: inline-block;
         border-bottom: 2px solid;
         padding: 0 5px 10px 5px;
-        margin-bottom: 10px; }
-    .tsg-section .section__content .section__blog-item {
-      padding: 10px;
-      border: 1px solid #ddd;
-      background: #fff; }
-      .tsg-section .section__content .section__blog-item .pf-img {
-        float: left;
-        width: 50px;
-        height: 50px; }
-      .tsg-section .section__content .section__blog-item div {
-        text-align: left;
-        margin-left: 60px; }
-  .tsg-section .section__footer {
-    margin-top: 30px; }
+        margin-bottom: 10px;
+        color: #2787ff; }
+  .tsg-section .section__blog-item {
+    padding: 10px;
+    border: 1px solid #ddd;
+    background: #fff; }
+    .tsg-section .section__blog-item .pf-img {
+      float: left;
+      width: 50px;
+      height: 50px;
+      background-color: #fbfbfb;
+      border-radius: 50%;
+      border: 1px solid transparent; }
+    .tsg-section .section__blog-item div {
+      text-align: left;
+      margin-left: 60px; }
+    .tsg-section .section__blog-item p {
+      margin-top: 5px;
+      font-weight: 100; }
 
-@media all and (max-width: 490px) {
-  .tsg .wrapper {
-    width: 490px; } }
+.section__footer {
+  margin-top: 30px; }
+  .section__footer .btn {
+    color: #fff;
+    box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.5);
+    padding: 12px 33px; }
+  .section__footer .btn:hover {
+    cursor: pointer;
+    color: inherit; }
+    .section__footer .btn:hover:active, .section__footer .btn:hover:hover, .section__footer .btn:hover:focus {
+      outline: 0;
+      text-decoration: none; }
+  .section__footer .btn-blue {
+    background-color: #2787ff;
+    margin-right: 2px;
+    padding: 12px 22px; }
+  .section__footer .btn-purple {
+    background-color: #6825fe;
+    margin-left: 2px; }
+
+.tsg-main__recommend-container {
+  text-align: center;
+  background-color: #2787ff;
+  color: #fff;
+  font-family: 'Noto Sans CJK', 'Nanum Gothic', 'Gothic'; }
+  .tsg-main__recommend-container .tsg-mansion {
+    padding: 60px 0; }
+  .tsg-main__recommend-container .tsg-mansion h4 {
+    margin-top: 15px; }
+  .tsg-main__recommend-container .tsg-mansion h4:before {
+    content: '"'; }
+  .tsg-main__recommend-container .tsg-mansion h4:after {
+    content: '"'; }
+  .tsg-main__recommend-container div {
+    font-weight: bold;
+    margin-top: 1px; }
+  .tsg-main__recommend-container .pf-img {
+    background-color: #fbfbfb;
+    border-radius: 50%;
+    border: 1px solid #cccfd0;
+    height: 60px;
+    width: 60px;
+    margin-bottom: 5px; }
+
+.tsg-main__section-container .section__btn-group .btn-more {
+  background-color: #2787ff; }
+
 .tsg-header h1 {
   display: inline-block;
   float: left;
