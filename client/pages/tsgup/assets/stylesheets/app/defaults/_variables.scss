@@ -9,7 +9,7 @@ $body--bg:               #fff !default;
 $font-size-default: 14px !default;
 $body-wrapper-width: 1024px;
 
-// Predefined Break-points
-$mediaMaxWidth: 1260px;
-$mediaBp1Width: 960px;
-$mediaMinWidth: 480px;
+
+$mediaDesktopWidth: 1024px;
+$mediaTabletWidth: 768px;
+$mediaPhoneWidth: 490px;
