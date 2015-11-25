@@ -147,7 +147,7 @@ SCSS를 설치하기 위해서는 기본적으로 Ruby가 필요합니다. 하�
 
 #### 3.2.1 type selector 지양 
 type selector(div, h1, span, ul, li 등등)을 사용할 경우 다른 구역에서의 의도치 않은 CSS가 변경될 수 있습니다.
-하지만 type selector의 올바른 사용은 생산성을 높게합니다. CSS에서 중첩이 2개 이하일때는 신중할 필요가 있습니다.
+하지만 type selector의 올바른 사용은 생산성을 높게합니다. SCSS에서 중첩이 2개 이하에서 사용할 때에는 신중할 필요가 있습니다.
 
 #### 3.2.2 The "multi-class" pattern
 
@@ -157,9 +157,50 @@ https://css-tricks.com/pseudo-class-selectors/
 https://css-tricks.com/almanac/selectors/a/after-and-before/
 	
 ### 3.3 Responsive for CSS
+#### 3.3.1 metatag
+모바일 기기에서 웹페이지를 볼 경우 모바일 기기는 화면이 작기때문에 웹페이지가 화면을 벗어나게 됩니다. 그래서 모바일기기내에서 화면을 다 볼 수 있게 하기 위해서 아래의 메타태그를 추가해줍니다.  
+\<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+#### 3.3.2 breakpoint
+반응형에서 이미지나 컨텐츠의 크기가 변하게 되는 지점인 breakpoint를 설정해줘야합니다.
+이 breakpoint는 보통적으로 스마트폰, 태블릿, PC로 나눠서 생각합니다. 하지만 세부적으로 들어가면 엄청 다양한 크기가 존재하며 가로화면까지 생각했을때는 breakpoint의 값은 [기기별 breakpoints](https://responsivedesign.is/develop/browser-feature-support/media-queries-for-common-device-breakpoints)에서 나온 만큼 다양해집니다.  
+그래서 device중심이 아닌 contents중심으로 breakpoint를 정합니다.  
+각 서비스별 contents에 맞는 크기가 있습니다. 화면을 작게한 다음에 점점 크기를 늘려나가면서 어디서 contents가 이상해보이는지 확인을 한 후 breakpoint를 정합니다.  
+breakpoint는 variables.scss 에서 정의합니다.
+
+#### 3.3.3 mixin
+1) mixin 활용  
+@mixin media($args...)    
+app에서 사용되는 구문  
+
+2) $args... options  
+"screen" : "only screen"  
+"print" : "only print"  
+"retina" : "(-webkit-min-device-pixel-ratio: 1.5), (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (min-device-pixel-ratio: 1.5), (min-resolution: 120dpi)"  
+">": "min-width"  
+"<": "max-width"  
+"desktopWidth": $mediaDesktopWidth   
+"tabletWidth": $mediaTabletWidth   
+"phoneWidth": $mediaPhoneWidth   
+  
+3) 사용방법   
+적용하고자 하는 CSS Selector의 block안의 맨아래에 @mixin media($args...)을 추가한다.
+
+  
+[참고: Dmitry Sheiko](http://codepen.io/dsheiko/pen/KeLGy)
 ### 3.4 Grid 사용
+
 ### 3.5 Mixin
 http://nicolasgallagher.com/about-html-semantics-front-end-architecture/
+
+### 3.6 image 
+#### 3.6.1 icon
+1) icon-font보다는 SVG를 사용합니다.  
+[( icon-font vs svg )](https://css-tricks.com/icon-fonts-vs-svg/)    
+
+2) icon이 많을 때는 css sprite를 사용합니다.  
+[( Icon System with SVG )](https://css-tricks.com/svg-sprites-use-better-icon-fonts/)  
+[An Overview of SVG Sprite Creation Techniques](https://24ways.org/2014/an-overview-of-svg-sprite-creation-techniques/)
 
 ## 4. 웹접근성
 ### 4.1 Skip navigation

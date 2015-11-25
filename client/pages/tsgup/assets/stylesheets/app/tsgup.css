@@ -274,15 +274,15 @@ a {
   @media (-webkit-min-device-pixel-ratio: 1.5), (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3 / 2), (min-device-pixel-ratio: 1.5), (min-resolution: 120dpi) {
     .section {
       border: 2px dotted #000; } }
-  @media only screen and (min-width: 961px) and (max-width: 1260px) {
+  @media only screen and (min-width: 769px) and (max-width: 1024px) {
     .section {
       background: red;
       color: white; } }
-  @media only screen and (min-width: 481px) and (max-width: 960px) {
+  @media only screen and (min-width: 491px) and (max-width: 768px) {
     .section {
       background: green;
       color: white; } }
-  @media only screen and (max-width: 480px) {
+  @media only screen and (max-width: 490px) {
     .section {
       background: blue;
       color: white; } }

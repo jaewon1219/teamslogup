@@ -349,21 +349,17 @@ a {
   background: silver;
   @include media("retina") {
     border: 2px dotted #000;
-  }
-;
-  @include media("screen", ">bp1Width", "<maxWidth") {
+  };
+  @include media("screen", ">tabletWidth", "<desktopWidth") {
     background: red;
     color: white;
-  }
-;
-  @include media("screen", ">minWidth", "<bp1Width") {
+  };
+  @include media("screen", ">phoneWidth", "<tabletWidth") {
     background: green;
     color: white;
-  }
-;
-  @include media("screen", "<minWidth") {
+  };
+  @include media("screen", "<phoneWidth") {
     background: blue;
     color: white;
-  }
-;
+  };
 }
