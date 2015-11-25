@@ -161,6 +161,20 @@ a {
       width: 420px;
       margin: 0 auto;
     }
+    @include media("<desktopWidth"){
+      h2{
+        width: 360px;
+      }
+      p{
+        width: 380px;
+      }
+    }
+    @include media("<tabletWidth"){
+
+    }
+    @include media("<phoneWidth"){
+
+    }
   }
 
   .section__content {

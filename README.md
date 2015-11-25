@@ -186,6 +186,8 @@ app에서 사용되는 구문
 3) 사용방법   
 적용하고자 하는 CSS Selector의 block안의 맨아래에 @mixin media($args...)을 추가한다.  
 
+*적용할 selector가 하나인 경우
+
 	.container{
 		background: blue;
 		@include media("screen", ">tabletWidth", "<desktopWidth") {
@@ -194,6 +196,27 @@ app에서 사용되는 구문
     	};
     }
   
+*적용할 selector가 두개이상인 경우
+	
+	.container{
+		background: blue;
+		h2{
+			width: 100px;
+		}
+		p{
+			padding: 20px;
+		}
+		@include media("screen", ">tabletWidth", "<desktopWidth") {
+			background: red;
+    		h2{
+				width: 50px;
+			}
+			p{
+				padding: 10px;
+			}
+    	};
+	}
+ 
 [참고: Dmitry Sheiko](http://codepen.io/dsheiko/pen/KeLGy)
 ### 3.4 Grid 사용
 #### 3.4.1 개념
@@ -215,3 +238,5 @@ http://nicolasgallagher.com/about-html-semantics-front-end-architecture/
 ### 4.2 Headings
 
 ## 5. 알아두면 좋은 특징들
+### 5.1 column의 height 맞추기
+https://css-tricks.com/fluid-width-equal-height-columns/

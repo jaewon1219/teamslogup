@@ -144,6 +144,11 @@ a {
     .tsg-section .section__header p {
       width: 420px;
       margin: 0 auto; }
+    @media (max-width: 1024px) {
+      .tsg-section .section__header h2 {
+        width: 360px; }
+      .tsg-section .section__header p {
+        width: 380px; } }
   .tsg-section .section__content {
     padding-left: 5px;
     padding-right: 5px;
