@@ -81,6 +81,46 @@ a {
 .tsg-why {
   padding: 60px 0; }
   .tsg-why .why__header {
+<<<<<<< HEAD
+    text-align: center;
+    margin-bottom: 50px;
+  }
+  .tsg-why .why__cts, .why__cts2 {
+    display: inline-block;
+    text-align: center;
+    width: 33%;
+    height:auto;
+    margin:auto 0;
+    padding: 0 50px;
+  }
+  .tsg-why .why__why {
+    font-size: 2em;
+    margin-bottom: 10px;
+  }
+  .tsg-why .why__cts2 {
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+  }
+
+.tsg-section .ptfolio__img {
+   width: 300px;
+   height: 200px;
+}
+.tsg-section .ptfolio {
+  width: 300px;
+  height: 300px;
+  margin: 0 8px;
+  border: 1px solid #eee;
+}
+.tsg-section .ptfolio__body h3 {
+  color: #2787ff;
+  margin: 5px;
+  padding: 5px;
+}
+.tsg-section .section__footer {
+  margin-top: 30px;
+}
+=======
     text-align: center; }
     .tsg-why .why__header h3 {
       margin-top: 10px; }
@@ -108,6 +148,7 @@ a {
         font-size: 4rem;
         line-height: 1;
         margin-bottom: 20px; }
+>>>>>>> e8edfcc3bfee3803fd62e996589fa8733c86dc99
 
 .tsg-section {
   text-align: center;
@@ -117,7 +158,6 @@ a {
     .tsg-section .section__header h2 {
       display: inline-block;
       width: 400px;
-      padding: 0 40px;
       font-size: 5rem;
       border-left: 1px solid #000;
       border-right: 1px solid #000;
