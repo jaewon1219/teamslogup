@@ -13,3 +13,9 @@ $body-wrapper-width: 1024px;
 $mediaDesktopWidth: $body-wrapper-width;
 $mediaTabletWidth: 768px;
 $mediaPhoneWidth: 490px;
+$mediaWatchWidth: 900px;
+
+/* add variables to $condMap in @media */
+$addCondMap: (
+        "<watchWidth": "(max-width: #{$mediaWatchWidth})"
+);

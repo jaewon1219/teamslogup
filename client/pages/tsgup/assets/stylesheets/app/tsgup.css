@@ -20,6 +20,7 @@ Generic --> Specific
 $font-*
 $border-*
 */
+/* add variables to $condMap in @media */
 ul, li {
   list-style-type: none;
   margin: 0;

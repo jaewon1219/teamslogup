@@ -69,7 +69,8 @@
           ">phoneWidth": "(min-width: #{$mediaPhoneWidth + 1})",
           "<phoneWidth": "(max-width: #{$mediaPhoneWidth})"
   );
-  @return map-get( $condMap, $c );
+
+  @return map-get( map-merge($condMap,$addCondMap), $c );
 }
 
 // The mdia mixin

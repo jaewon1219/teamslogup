@@ -17,7 +17,7 @@ HTML, CSS에 관한 코딩 스타일 가이드 **for Markup Languages (HTML/CSS)
 4. 웹접근성
 5. 알아두면 좋은 특징들
 
-## 1. 네이밍 규칙
+## 네이밍 규칙
 ### 1.1 BEM(Block, Element, Modifier)
 ####1.1.1 개요  
 BEM은 Yandex에서 고안된 프론트엔드 네이밍 방법론입니다. team slogup에서 사용하는 BEM은 [Nicolas Gallagher](http://nicolasgallagher.com/about-html-semantics-front-end-architecture/)에 의해 다듬어진 것을 토대로합니다.  
@@ -102,30 +102,30 @@ container는 web application과 모듈을 한 단계 분리 시킴으로써 모�
     
 ### 1.3 네이밍 문자
 ####1.3.1 일반 규칙  
-1. 문자와 숫자조합이 가능합니다.
-2. 시작문자는 문자만 가능합니다.
-3. 두 단어의 조합일 경우 Camel표기법보다는 (-)하이픈을 사용합니다. ex) sectionName -> section-name
-4. 단어의 수가 8자 이상일 경우 약어를 사용합니다. 약어를 만드는 규칙은 없습니다. ex) team slog up -> tsg
-5. 쌍(아래)붙임표는 약속어이므로 사용을 금지합니다.
+- 문자와 숫자조합이 가능합니다.
+- 시작문자는 문자만 가능합니다.
+- 두 단어의 조합일 경우 Camel표기법보다는 (-)하이픈을 사용합니다. ex) sectionName -> section-name
+- 단어의 수가 8자 이상일 경우 약어를 사용합니다. 약어를 만드는 규칙은 없습니다. ex) team slog up -> tsg
+- 쌍(아래)붙임표는 약속어이므로 사용을 금지합니다.
  
-## 2. HTML 코드 작성 규칙
+## HTML 코드 작성 규칙
 ### 2.1 outline
 #### 2.1.1 주요한 태그들
-1) Sectioning root  
+- Sectioning root  
 하나의 독립된 outline을 제공합니다.
 해당되는 태그들은 body, blockquote, figure, td, details, dialog, fieldset 입니다.
-2) Sectioning content
+- Sectioning content
 sectioning content는 HTML 문서를 섹션으로 나누도록 도와줍니다. 섹션과 그 섹션안의 헤더를 이용하여 outline을 만들 수 있게됩니다. article, aside, nav, section
 
 #### 2.1.2 일반 규칙
-1) only H1 - 웹페이지내에서 H1은 하나만 갖습니다. SEO 강화를 위해서 H1은 title과 달라야합니다.  
+- only H1 - 웹페이지내에서 H1은 하나만 갖습니다. SEO 강화를 위해서 H1은 title과 달라야합니다.  
   
-2) sectioning content내에 headings(h1~h6)을 정의해줍니다. 하지만 웹페이지에서 보여줄 때 보이면 안되는 경우가 있습니다. 그럴 때는 부트스트랩에서 제공하는 클래스 sr-only를 사용합니다.  
+- sectioning content내에 headings(h1~h6)을 정의해줍니다. 하지만 웹페이지에서 보여줄 때 보이면 안되는 경우가 있습니다. 그럴 때는 부트스트랩에서 제공하는 클래스 sr-only를 사용합니다.  
 sr-only를 사용하는 이유는 다른 Hidden text방식이 구글의 검색 랭킹과 웹접근성에 영향을 주기 때문입니다.  
 ([여러 Hidden text방식에 대한 설명](http://stackoverflow.com/questions/5523194/html5-titles-in-sectioning-elements-document-outline-and-seo-implications?rq=1))  
 ([구글 Quality guidelines](https://support.google.com/webmasters/answer/66353?hl=en))
 
-3) 아래의 홈페이지에서 HTML구조가 맞는 지 확인해야합니다. team slogup에서는 untitled가 없어야합니다. 
+- 아래의 홈페이지에서 HTML구조가 맞는 지 확인해야합니다. team slogup에서는 untitled가 없어야합니다. 
 [https://gsnedders.html5.org/outliner/](https://gsnedders.html5.org/outliner/)
 
 ### 2.2 HTML 유효 검사
@@ -133,7 +133,7 @@ w3c의 유효 검사를 통과해야합니다.
 [https://validator.w3.org/](https://validator.w3.org/)
 
 
-## 3. CSS 코드 작성 규칙
+## CSS 코드 작성 규칙
 ### 3.1 OOCSS (SCSS)
 #### 3.1.1 설치 on Mac
 SCSS를 설치하기 위해서는 기본적으로 Ruby가 필요합니다. 하지만 운이 좋게도 맥은 기본적으로 Ruby가 깔려져있습니다.
@@ -150,6 +150,23 @@ type selector(div, h1, span, ul, li 등등)을 사용할 경우 다른 구역에
 하지만 type selector의 올바른 사용은 생산성을 높게합니다. SCSS에서 중첩이 2개 이하에서 사용할 때에는 신중할 필요가 있습니다.
 
 #### 3.2.2 The "multi-class" pattern
+버튼이라는 클래스가 있다고 하자!! 버튼이 라운드 버튼이 있고 네모난 버튼이 있다.
+추상화 개념을 이용하여 라운드 버튼과 네모난 버튼의 공통점을 btn 클래스로 뽑아낸다.
+
+	.btn{
+		display: inline-block;
+		border: 1px solid;
+		cursor: pointer;
+	}
+	.btn-round{
+		border-radius: 100%;
+	}
+	.btn-rect{
+		border-radius: 8px;
+	}
+	
+	<button class="btn btn-round"></button>
+	<button class="btn btn-rect"></button>
 
 #### 3.2.3 the Pseudo Class Selectors
 https://css-tricks.com/pseudo-class-selectors/
@@ -159,21 +176,34 @@ https://css-tricks.com/almanac/selectors/a/after-and-before/
 ### 3.3 Responsive for CSS
 #### 3.3.1 metatag
 모바일 기기에서 웹페이지를 볼 경우 모바일 기기는 화면이 작기때문에 웹페이지가 화면을 벗어나게 됩니다. 그래서 모바일기기내에서 화면을 다 볼 수 있게 하기 위해서 아래의 메타태그를 추가해줍니다.  
-\<meta name="viewport" content="width=device-width, initial-scale=1" />
+	
+	\<meta name="viewport" content="width=device-width, initial-scale=1" />
 
 #### 3.3.2 breakpoint
-반응형에서 이미지나 컨텐츠의 크기가 변하게 되는 지점인 breakpoint를 설정해줘야합니다.
+- 반응형에서 이미지나 컨텐츠의 크기가 변하게 되는 지점인 breakpoint를 설정해줘야합니다.
 이 breakpoint는 보통적으로 스마트폰, 태블릿, PC로 나눠서 생각합니다. 하지만 세부적으로 들어가면 엄청 다양한 크기가 존재하며 가로화면까지 생각했을때는 breakpoint의 값은 [기기별 breakpoints](https://responsivedesign.is/develop/browser-feature-support/media-queries-for-common-device-breakpoints)에서 나온 만큼 다양해집니다.  
 그래서 device중심이 아닌 contents중심으로 breakpoint를 정합니다.  
 각 서비스별 contents에 맞는 크기가 있습니다. 화면을 작게한 다음에 점점 크기를 늘려나가면서 어디서 contents가 이상해보이는지 확인을 한 후 breakpoint를 정합니다.  
-breakpoint는 variables.scss 에서 정의합니다.
+breakpoint는 variables.scss 에서 정의합니다.  
+
+- core에서는 breakpoints가 3개(desktop, tablet, phone)으로 되어 있다.
+더 추가를 하고 싶을 경우에는 variables.scss에 있는 $addCondMap에 args에 쓰일 값과 scss변수(또는 숫자)를 추가해주면 된다.
+	
+		$mediaWatchWidth: 900px;
+		
+		/* add variables to $condMap in @media */
+		$addCondMap: (
+			"<watchWidth": "(max-width: #{$mediaWatchWidth})"
+		);
+	
+
 
 #### 3.3.3 mixin
-1) mixin 활용  
+- mixin 활용  
 @mixin media($args...)    
-app에서 사용되는 구문  
+app의 css에 사용되는 구문  
 
-2) $args... options  
+- $args... options  
 "screen" : "only screen"  
 "print" : "only print"  
 "retina" : "(-webkit-min-device-pixel-ratio: 1.5), (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (min-device-pixel-ratio: 1.5), (min-resolution: 120dpi)"  
@@ -183,10 +213,10 @@ app에서 사용되는 구문
 "tabletWidth": $mediaTabletWidth   
 "phoneWidth": $mediaPhoneWidth   
   
-3) 사용방법   
+- 사용방법   
 적용하고자 하는 CSS Selector의 block안의 맨아래에 @mixin media($args...)을 추가한다.  
 
-*적용할 selector가 하나인 경우
+- *적용할 selector가 하나인 경우
 
 	.container{
 		background: blue;
@@ -196,7 +226,7 @@ app에서 사용되는 구문
     	};
     }
   
-*적용할 selector가 두개이상인 경우
+- *적용할 selector가 두개이상인 경우
 	
 	.container{
 		background: blue;
@@ -221,22 +251,26 @@ app에서 사용되는 구문
 ### 3.4 Grid 사용
 #### 3.4.1 개념
 
+#### 3.4.2 적용방법
+
+
 ### 3.5 Mixin
-http://nicolasgallagher.com/about-html-semantics-front-end-architecture/
+- http://nicolasgallagher.com/about-html-semantics-front-end-architecture/
 
 ### 3.6 image 
 #### 3.6.1 icon
-1) icon-font보다는 SVG를 사용합니다.  
+- icon-font보다는 SVG를 사용합니다.  
 [( icon-font vs svg )](https://css-tricks.com/icon-fonts-vs-svg/)    
 
-2) icon이 많을 때는 css sprite를 사용합니다.  
+- icon이 많을 때는 css sprite를 사용합니다.  
 [( Icon System with SVG )](https://css-tricks.com/svg-sprites-use-better-icon-fonts/)  
 [An Overview of SVG Sprite Creation Techniques](https://24ways.org/2014/an-overview-of-svg-sprite-creation-techniques/)
 
-## 4. 웹접근성
+## 웹접근성
 ### 4.1 Skip navigation
+
 ### 4.2 Headings
 
-## 5. 알아두면 좋은 특징들
-### 5.1 column의 height 맞추기
+## 알아두면 좋은 특징들
+### 5.1 columns의 height 맞추기
 https://css-tricks.com/fluid-width-equal-height-columns/
